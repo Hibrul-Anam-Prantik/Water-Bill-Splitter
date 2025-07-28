@@ -5,9 +5,11 @@ let purchaseCount = 0;
 const membersDiv = document.getElementById("members");
 const messageDiv = document.getElementById("message");
 const addBillBtn = document.getElementById("addBillBtn");
+const resetBtn = document.getElementById("resetBtn");
 const purchaseCountDiv = document.getElementById("purchaseCount");
 
 addBillBtn.addEventListener("click", addWaterBill);
+resetBtn.addEventListener("click", resetAll);
 
 function addWaterBill() {
   totalBill += 110;
@@ -15,6 +17,15 @@ function addWaterBill() {
   messageDiv.textContent = `৳110 added to the water bill.`;
   messageDiv.style.display = "block";
   purchaseCountDiv.textContent = `Purchases: ${purchaseCount}`;
+  renderMembers();
+}
+
+function resetAll() {
+  totalBill = 0;
+  purchaseCount = 0;
+  messageDiv.textContent = "All values have been reset.";
+  messageDiv.style.display = "block";
+  purchaseCountDiv.textContent = `Purchases: 0`;
   renderMembers();
 }
 

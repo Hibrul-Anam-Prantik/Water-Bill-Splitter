@@ -19,8 +19,9 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Button */
-#addBillBtn {
+/* Buttons */
+#addBillBtn,
+#resetBtn {
   font-size: 1.1rem;
   padding: 12px 24px;
   background-color: #00bcd4;
@@ -28,9 +29,10 @@ h1 {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin: 0 10px 20px 10px;
 }
-#addBillBtn:hover {
+#addBillBtn:hover,
+#resetBtn:hover {
   background-color: #0097a7;
 }
 
